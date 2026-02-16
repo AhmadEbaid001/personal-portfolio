@@ -1,0 +1,111 @@
+Ahmed Mohamed Ebaid
+ +20 155 339 5331
+Security Engineer
+# ahmedebaid0xc@gmail.com
+Bachelor of Science in Information Technology
+§ GitHub Profile
+6th of October, Giza, Egypt
+ï LinkedIn Profile
+Objective
+Motivated Security Engineer with a focus on Cloud Architecture and Secure Computing. Possesses comprehensive
+knowledge of Virtualization, Storage Area Networks (SAN), and DDoS mitigation, backed by practical internship
+experience. Eager to utilize skills in Python scripting, Linux administration, and Network Security to design and
+maintain scalable, secure, and redundant infrastructure systems.
+Education
+•Bachelor of Science in Information Technology (Networks, Security and Governance)
+Oct 2022 – July 2026
+Zewail City of Science and Technology
+Giza, Egypt
+Work Experience
+•Security Intern
+Jul 2025 – Aug 2025
+Commercial International Bank (CIB)
+Egypt
+– Gained exposure to banking IT systems and security practices.
+– Assisted in cybersecurity tasks and network management.
+•Network Intern
+Jul 2024 – Jan 2025
+Zewail City IT Department
+Giza, Egypt
+– Gained hands-on experience in network administration and maintenance.
+– Assisted in vulnerability assessment and security implementations.
+– Participated in network design and installation projects.
+Volunteer Experience
+•Junior Teaching Assistant
+Sep 2024 – Dec 2024
+Network Installation & Maintenance Course, Zewail City of Science and Technology
+Giza, Egypt
+– Assisted students with network installation and maintenance concepts.
+– Supported course instructors with lab sessions and demonstrations.
+•Member of Parliament (IT Major Representative)
+Sep 2023 – Sep 2024
+Zewail City Student Parliament
+Giza, Egypt
+– Represented IT students in university governance.
+– Participated in decision-making processes affecting student life.
+Technical Skills and Interests
+Networking: Network Design, Installation, Maintenance, Security, Administration, CCNA, CCNP
+Security: Vulnerability Assessment, Encryption, Cybersecurity, IT Governance, Incident Response, Security
+Frameworks
+Cloud: Cloud Computing Architecture, Secure Computing, AWS, Microsoft 365/Azure
+Programming Languages: Python, SQL, HTML/CSS, Bash/Scripting Languages
+Databases: Microsoft SQL Server, Data Structures
+Other Skills: Computer Hardware Troubleshooting, Web Development, IoT, Robotics
+Areas of Interest: Network Security, Cloud Computing, Cybersecurity
+Soft Skills: Critical Thinking, Teamwork, Teaching, Written Communication, Adaptability, Quick Learner, Problem
+Solving
+Projects
+•AURA: Hybrid Cloud University Registration System (Capstone)
+Sep 2025 – Jun 2026
+Azure, On-Premises, React.js, Express.js, PostgreSQL
+GitHub Link
+– Architected a Hybrid Cloud solution integrating local servers with Azure Virtual Machines to handle peak traffic
+loads.
+– Designed an auto-scaling infrastructure using Load Balancers to activate cloud resources only during registration
+spikes.
+– Implemented secure Role-Based Access Control (RBAC) and OTP verification to protect student and faculty data.
+•Automated Network Backup & Disaster Recovery Framework
+Dec 2025
+Bash Scripting, OpenSSL (AES-256), Cron, EVE-NG
+GitHub Link
+– Developed a Zero-Touch automated backup system achieving a 24-hour Recovery Point Objective (RPO).
+– Implemented AES-256 encryption for data at rest and secured transfers via SSH using 2048-bit RSA keys.
+– Engineered network resilience using Link Aggregation (Bonding) and validated 148 Mbps throughput with zero
+packet loss.
+•Enterprise Data Center Network Design
+Dec 2025
+Cisco Packet Tracer, OSPF, VLANs, SNMP, DHCP
+GitHub Link
+– Designed a three-tier hierarchical network infrastructure supporting 600+ users across five departments.
+– Configured OSPF dynamic routing and Dual-ISP redundancy to ensure high availability and fault tolerance.
+– Implemented VLSM for efficient IP allocation and deployed SNMPv2c for proactive centralized network monitoring.
+•Secure Communication Protocol Implementation
+May 2025
+Python, PyCryptodome, RSA (2048-bit), AES-GCM
+GitHub Link
+– Developed a secure messaging application using RSA-2048 for key exchange and AES-GCM for authenticated
+encryption.
+– Implemented Digital Signatures (RSA-PSS) to guarantee message authenticity and non-repudiation.
+– Engineered session key derivation using HKDF-SHA256, ensuring forward secrecy and robust cryptographic secu-
+rity.
+Certifications
+•Information Security Analyst (Infrastructure and Security)
+2026
+Digital Egyptian Pioneers Initiative (DEPI) - MCIT
+– Core Competencies: Trained in encrypting data at rest and in transit, advising on security system implementation,
+and investigating intrusion detection alerts.
+– Technical Modules: SOC Essential Concepts, Vulnerability Management, Cyber Threats (IoCs & Attack Method-
+ology), SIEM (Incident Detection), and Logging.
+– Operations & Response: Incident Response & Management, Security Operations, Reporting & Communication,
+and Prompt Engineering.
+– Capstone Project: Completed a comprehensive project applying security analysis and management principles.
+•Google Cybersecurity Professional Certificate
+2023
+Coursera
+– Connect and Protect: Networks and Network Security
+– Assets, Threats, and Vulnerabilities
+– Automate Cybersecurity Tasks with Python
+– Play It Safe: Manage Security Risks
+– Sound the Alarm: Detection and Response
+– Tools of the Trade: Linux and SQL
+– Foundations of Cybersecurity
