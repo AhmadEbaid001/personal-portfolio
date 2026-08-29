@@ -1,0 +1,238 @@
+% ============================================================
+%  Ahmed Mohamed Ebaid - Resume (typographic build, ATS-hardened)
+%  Same content as resume_ats.tex, styled: small-caps headings,
+%  serif body, bold keywords, header icons.
+%  ATS hardening kept from the plain build:
+%   - cmap + lmodern + ligatures off  -> "Configured" extracts intact
+%   - no tabular/tabularx anywhere    -> no multi-column parsing
+%   - hyphenation off                 -> no keyword split across lines
+%   - full URLs printed as text, no icons inside entry titles
+%  Verify after any edit:  pdftotext resume_pretty.pdf - | less
+% ============================================================
+\documentclass[10pt,letterpaper]{article}
+
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[left=0.6in,right=0.6in,top=0.38in,bottom=0.38in]{geometry}
+\usepackage{fontawesome5}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+\DisableLigatures[f,i,l]{encoding = T1, family = *}
+
+\hypersetup{pdftitle={Ahmed Mohamed Ebaid - Resume},
+            pdfauthor={Ahmed Mohamed Ebaid},
+            pdfsubject={Cloud Security / Security Engineering},
+            pdfkeywords={Cloud Security, AWS, Azure, DevSecOps, SIEM,
+                         Vulnerability Assessment, Incident Response,
+                         Network Security, Python, Docker}}
+
+% ---- make the FontAwesome glyphs extract as spaces, not control chars ----
+% Without this the header icons come out of pdftotext as \x84, #, +, ï, §.
+\pdfgentounicode=1
+\input glyphtounicode
+\pdfglyphtounicode{phone-alt}{0020}
+\pdfglyphtounicode{envelope}{0020}
+\pdfglyphtounicode{map-marker-alt}{0020}
+\pdfglyphtounicode{linkedin}{0020}
+\pdfglyphtounicode{github}{0020}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\raggedbottom
+\linespread{0.97}\selectfont
+
+% ---- no hyphenation: a split word is two useless tokens to a parser ----
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\tolerance=3000
+\emergencystretch=3em
+
+% ---- section headings: small caps + rule ----
+\titleformat{\section}
+  {\large\scshape\raggedright}{}{0em}{}[\vspace{-0.55em}\rule{\textwidth}{0.6pt}]
+\titlespacing{\section}{0pt}{0.36em}{0.2em}
+
+% ---- title/date rows built with \hfill, never a table ----
+\newcommand{\headerrow}[2]{%
+  \begingroup\rightskip=0pt plus 0pt\relax
+  #1\hfill #2\par\endgroup}
+
+\newcommand{\entry}[4]{%
+  \headerrow{\textbf{#1}}{#2}%
+  \headerrow{\textit{#3}}{\textit{#4}}%
+  \vspace{0.04em}}
+
+\newcommand{\project}[3]{%
+  \headerrow{\textbf{#1}}{#2}%
+  \textit{#3}\par\vspace{0.08em}}
+
+\newlist{tight}{itemize}{1}
+\setlist[tight]{label={--},leftmargin=1.35em,labelsep=0.4em,
+  topsep=0.06em,itemsep=0.02em,parsep=0pt,partopsep=0pt}
+
+\newenvironment{block}{\vspace{0.03em}\begingroup}{\endgroup\vspace{0.06em}}
+
+\begin{document}
+
+% ==================== HEADER ====================
+% Icons are decorative only; every one is followed by the full plain-text
+% value (URLs written out) so extraction never depends on the glyph.
+\begin{center}
+  {\Huge\scshape Ahmed Mohamed Ebaid}\\[0.4em]
+  {\normalsize Cloud Security / Security Engineer}\\[0.35em]
+  \small
+  \faPhone* \ +20 155 339 5331 \quad
+  \faEnvelope \ \href{mailto:ahmedebaid0xc@gmail.com}{ahmedebaid0xc@gmail.com} \quad
+  \faMapMarker* \ Giza, Egypt\\[0.2em]
+  \faLinkedin \ \href{https://www.linkedin.com/in/ahmed-ebaid-0xc/}{linkedin.com/in/ahmed-ebaid-0xc} \quad
+  \faGithub \ \href{https://github.com/AhmadEbaid001}{github.com/AhmadEbaid001}
+\end{center}
+\vspace{-0.2em}
+
+% ==================== SUMMARY ====================
+\section*{\textsc{Summary}}
+Security-focused IT graduate specializing in cloud infrastructure security, with hands-on experience designing hybrid cloud
+architectures on AWS and Azure. Proficient in vulnerability assessment, SIEM operations, DevSecOps pipelines, and network
+security. Seeking a cloud security role securing cloud-native and hybrid environments.
+
+% ==================== EDUCATION ====================
+\section*{\textsc{Education}}
+\begin{block}
+\entry{B.Sc. in Computational Science and Artificial Intelligence}{Oct 2022 -- Jul 2026 (graduated)}
+      {Zewail City of Science and Technology}{Giza, Egypt}
+\begin{tight}
+  \item Major: Information Technology. Concentration: Networks, Security and Governance.
+  \item Relevant coursework: Network Security, Cloud Computing, IT Governance, Cryptography, Operating Systems, Database Systems.
+\end{tight}
+\end{block}
+
+% ==================== EXPERIENCE ====================
+\section*{\textsc{Professional Experience}}
+\begin{block}
+\entry{Security Intern}{Jul 2025 -- Aug 2025}
+      {Commercial International Bank (CIB)}{Egypt}
+\begin{tight}
+  \item Conducted a vulnerability assessment simulation using \textbf{Nessus}, scanning a deliberately vulnerable endpoint, analyzing findings, and documenting remediation recommendations.
+  \item Gained operational exposure to \textbf{Splunk SIEM}: explored log ingestion pipelines, constructed search queries, and configured a correlation alert for anomalous activity detection.
+  \item Studied enterprise-grade security controls and governance frameworks applied in a regulated banking environment.
+\end{tight}
+\vspace{0.18em}
+
+\entry{Network Intern}{Jul 2024 -- Jan 2025}
+      {Zewail City IT Department}{Giza, Egypt}
+\begin{tight}
+  \item Designed and partially implemented a network quota management system using open-source tools, enforcing per-user bandwidth policies across the campus network.
+  \item Assisted in vulnerability assessments and security hardening tasks across the university internal network infrastructure.
+  \item Participated in network installation and maintenance projects, gaining hands-on experience with enterprise switching, routing, and cabling.
+\end{tight}
+\end{block}
+
+% ==================== PROJECTS ====================
+\section*{\textsc{Projects}}
+\begin{block}
+
+\project{EcoForge GEMP: Green Energy Monitoring Platform}{Aug 2026 -- Sep 2026}
+        {Python, FastAPI, Docker, TimescaleDB, MQTT, OR-Tools CP-SAT, nginx}
+\begin{tight}
+  \item \textbf{Designed and implemented the full system} as sole engineer on a two-person team: architecture, telemetry ingestion, optimization engine, API, and front end, delivered as a containerized stack behind \textbf{457 automated tests}.
+  \item Engineered \textbf{tamper-evident telemetry storage} with \textbf{HMAC-signed, hash-chained} meter readings and chain heads anchored outside the database volume, plus \textbf{Role-Based Access Control} and an audit log recording denied as well as permitted actions.
+  \item Built a \textbf{DevSecOps CI/CD pipeline} blocking on any finding from \textbf{Bandit, Semgrep, pip-audit, Gitleaks, Hadolint, and Trivy} (filesystem, config, IaC, and image), with signed container builds and expiry-dated security exceptions.
+\end{tight}
+\vspace{0.18em}
+
+\project{AURA: Hybrid Cloud University Registration System}{Sep 2025 -- Jun 2026}
+        {AWS, Azure, React.js, Express.js, PostgreSQL}
+\begin{tight}
+  \item Architected a hybrid cloud solution integrating on-premises servers with \textbf{AWS} (IAM, VPC, Security Groups, Load Balancer) and \textbf{Azure} containerized microservices to handle registration traffic spikes.
+  \item Designed and enforced \textbf{Role-Based Access Control (RBAC)} and OTP-based multi-factor authentication to protect student and faculty data.
+  \item Configured \textbf{AWS IAM} policies with least-privilege principles and \textbf{Security Groups} to segment traffic between application tiers.
+  \item Leveraged Azure container orchestration to enable auto-scaling during peak load, ensuring availability without over-provisioning.
+\end{tight}
+\vspace{0.18em}
+
+\project{Secure Communication Protocol}{May 2025}
+        {Python, PyCryptodome, RSA-2048, AES-GCM}
+\begin{tight}
+  \item Built a secure messaging application implementing \textbf{RSA-2048} for key exchange, \textbf{AES-GCM} for authenticated encryption, and \textbf{RSA-PSS} digital signatures for non-repudiation.
+  \item Engineered session key derivation using \textbf{HKDF-SHA256}, ensuring forward secrecy across communication sessions.
+\end{tight}
+\vspace{0.18em}
+
+\project{Automated Network Backup and Disaster Recovery Framework}{Dec 2025}
+        {Bash, OpenSSL AES-256, Cron, EVE-NG}
+\begin{tight}
+  \item Developed a zero-touch automated backup system achieving a \textbf{24-hour Recovery Point Objective (RPO)}, with AES-256 encryption at rest and SSH/RSA-2048 secured transfers.
+  \item Validated network resilience via Link Aggregation (Bonding), achieving \textbf{148 Mbps throughput with zero packet loss}.
+\end{tight}
+\vspace{0.18em}
+
+\project{Enterprise Data Center Network Design}{Dec 2025}
+        {Cisco Packet Tracer, OSPF, VLANs, SNMP}
+\begin{tight}
+  \item Designed a three-tier hierarchical network supporting \textbf{600+ users} across five departments, with OSPF dynamic routing and Dual-ISP redundancy for high availability.
+  \item Implemented VLSM for efficient IP allocation and SNMPv2c for centralized proactive monitoring.
+\end{tight}
+\end{block}
+
+% ==================== SKILLS ====================
+\section*{\textsc{Technical Skills}}
+\begin{block}
+\textbf{Cloud and Infrastructure:} AWS (IAM, VPC, Security Groups, Load Balancer), Microsoft Azure (Containers, Auto-Scaling), Hybrid Cloud Architecture, Docker, Docker Compose, nginx\\[0.1em]
+\textbf{Security Tools:} Nessus, Splunk (SIEM), Wireshark, Nmap, Snort, Volatility, Autopsy\\[0.1em]
+\textbf{DevSecOps:} CI/CD security gating, GitHub Actions, SAST (Bandit, Semgrep), Software Composition Analysis (pip-audit), Secrets Scanning (Gitleaks), Container and IaC Scanning (Trivy, Hadolint), Container Image Signing\\[0.1em]
+\textbf{Security Domains:} Vulnerability Assessment, Incident Response, Threat Detection, SIEM Operations, Threat Modelling (MITRE ATT\&CK, STRIDE, PASTA), Encryption and Key Management, Application and API Security, Role-Based Access Control (RBAC), Audit Logging, Data Integrity (HMAC, Hash Chaining), IT Governance\\[0.1em]
+\textbf{Networking:} Network Design and Installation, Firewall Configuration, VLANs, OSPF, VLSM, SNMP, MQTT, CCNA/CCNP track\\[0.1em]
+\textbf{Programming and Scripting:} Python (FastAPI, pytest), Bash, SQL, HTML/CSS\\[0.1em]
+\textbf{Platforms and Systems:} Linux (Ubuntu, Kali), Windows Server, PostgreSQL, TimescaleDB, EVE-NG, Cisco Packet Tracer\\[0.1em]
+\textbf{Languages:} Arabic (native), English (fluent)
+\end{block}
+
+% ==================== CERTIFICATIONS ====================
+\section*{\textsc{Certifications}}
+\begin{block}
+
+\entry{Information Security Analyst - Infrastructure and Security}{2026}
+      {Digital Egyptian Pioneers Initiative (DEPI), MCIT}{}
+\begin{tight}
+  \item Capstone: designed a full \textbf{Incident Response Playbook} covering detection, containment, eradication, and recovery phases for enterprise security incidents.
+  \item Core modules: SOC Operations, Vulnerability Management, SIEM and Incident Detection, Cyber Threat Analysis (IoCs and Attack Methodology).
+\end{tight}
+\vspace{0.18em}
+
+\entry{Security Engineer Path - 3 Certificates Completed}{2026}
+      {TryHackMe}{}
+\begin{tight}
+  \item \textbf{Security Engineer:} IAM and cryptography, threat modelling frameworks (MITRE ATT\&CK, STRIDE, PASTA), network and system security.
+  \item \textbf{DevSecOps:} security in CI/CD, SAST, software composition analysis, secrets and container image scanning, pipeline hardening.
+  \item \textbf{Defending AWS:} IAM policy design, VPC network controls, CloudTrail logging, and detection and response for cloud-native attacks.
+\end{tight}
+\vspace{0.18em}
+
+\entry{Google Cybersecurity Professional Certificate}{2023}
+      {Coursera}{}
+\begin{tight}
+  \item Covered network security, asset and threat management, Python automation for cybersecurity, Linux and SQL for security operations, and detection and response.
+\end{tight}
+\end{block}
+
+% ==================== VOLUNTEER ====================
+\section*{\textsc{Volunteer Experience}}
+\begin{block}
+\entry{Junior Teaching Assistant - Network Installation and Maintenance}{Sep 2024 -- Dec 2024}
+      {Zewail City of Science and Technology}{Giza, Egypt}
+\begin{tight}
+  \item Assisted instructors in lab sessions covering physical network installation, troubleshooting, and maintenance for undergraduate students.
+\end{tight}
+\end{block}
+
+% ==================== CURRENTLY LEARNING ====================
+\section*{\textsc{Currently Learning}}
+\begin{block}
+Preparing for the \textbf{AWS Certified Security - Specialty (SCS-C02)} certification \textit{(in progress)}.
+\end{block}
+
+\end{document}

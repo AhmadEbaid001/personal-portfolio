@@ -1,592 +1,860 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Ahmed Mohamed Ebaid — Security Engineer specializing in Cloud Architecture, Network Security, and Cybersecurity. Portfolio showcasing projects, experience, and certifications.">
-    <meta name="keywords" content="Security Engineer, Cybersecurity, Cloud Architecture, Network Security, Portfolio">
-    <meta name="author" content="Ahmed Mohamed Ebaid">
-    <title>Ahmed Ebaid — Security Engineer</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahmed Ebaid — Cloud Security Engineer</title>
+  <meta name="description"
+    content="Ahmed Mohamed Ebaid — cloud security engineer. AURA hybrid-cloud registration platform, tamper-evident telemetry, DevSecOps pipelines on AWS and Azure.">
+  <meta name="author" content="Ahmed Mohamed Ebaid">
+  <meta name="theme-color" content="#FFFFFF" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#030914" media="(prefers-color-scheme: dark)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ahmed Ebaid — Cloud Security Engineer">
+  <meta property="og:description"
+    content="Hybrid-cloud architecture, tamper-evident systems, and CI pipelines that actually block.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23030914'/><text x='16' y='23' font-family='monospace' font-size='18' font-weight='700' fill='%2322CD6E' text-anchor='middle'>E</text></svg>">
+
+  <!-- Theme applied before first paint so the page never flashes the wrong ground. -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('theme');
+        var prefers = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', saved || prefers);
+      } catch (e) { /* storage blocked: keep the light default */ }
+    })();
+  </script>
 </head>
 
 <body>
-    <!-- ======== NAVIGATION ======== -->
-    <nav id="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>AE<span class="logo-bracket">/&gt;</span>
-            </a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#certifications" class="nav-link">Certifications</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="shell head-inner">
+      <a class="wordmark" href="#top" aria-label="Ahmed Ebaid, back to top">
+        <span class="wordmark-mark" aria-hidden="true"></span>
+        <span class="wordmark-text">
+          <span class="wordmark-name">Ahmed Ebaid</span>
+          <span class="wordmark-role">Cloud Security</span>
+        </span>
+      </a>
+
+      <nav class="head-nav" aria-label="Sections">
+        <a href="#work">Work</a>
+        <a href="#experience">Experience</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="head-actions">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Switch to dark theme">
+          <svg class="ico-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2.5v2.6M12 18.9v2.6M2.5 12h2.6M18.9 12h2.6M5.3 5.3l1.9 1.9M16.8 16.8l1.9 1.9M18.7 5.3l-1.9 1.9M7.2 16.8l-1.9 1.9" />
+          </svg>
+          <svg class="ico-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.2 8.2 0 1 0 10.2 10.2z" />
+          </svg>
+        </button>
+        <button id="menuToggle" class="icon-btn menu-btn" type="button" aria-expanded="false"
+          aria-controls="mobileNav" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M4 8h16M4 16h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <nav id="mobileNav" class="mobile-nav" aria-label="Sections" hidden>
+      <a href="#work">Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#profile">Profile</a>
+      <a href="#contact">Contact</a>
     </nav>
+  </header>
 
-    <!-- ======== HERO SECTION ======== -->
-    <section id="hero">
-        <canvas id="matrixCanvas"></canvas>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-badge">🔒 Security Engineer</div>
-            <h1 class="hero-name">
-                <span class="greeting">Hello, I'm</span>
-                <span class="name-text">Ahmed <span class="accent">Ebaid</span></span>
-            </h1>
-            <div class="hero-typing">
-                <span class="typing-prefix">&gt; </span>
-                <span id="typingText" class="typing-text"></span>
-                <span class="cursor">|</span>
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section id="top" class="hero">
+      <div class="shell hero-top">
+        <p class="status-line reveal">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="mono">Giza, Egypt &middot; open to cloud security roles</span>
+        </p>
+
+        <h1 class="hero-title reveal">
+          I build systems that can<br>
+          <em>prove</em> they still work.
+        </h1>
+
+        <!-- Interactive hero figure: live request pipeline through four gates.
+             Switching a gate off lets the matching attack class reach the origin. -->
+        <div class="hero-figure reveal">
+          <figure class="demo pipe" id="pipeDemo">
+            <figcaption>
+              <span class="demo-title mono">Defence in depth</span>
+              <span class="demo-state mono" id="pipeState" role="status" aria-live="polite">All gates up</span>
+            </figcaption>
+
+            <canvas id="pipeCanvas" width="640" height="300" role="img"
+              aria-label="Live diagram: requests flow left to right through a WAF, a TLS gate and an authorisation gate before reaching the origin. Hostile requests are stopped at whichever gate is switched on.">
+            </canvas>
+
+            <div class="pipe-gates" role="group" aria-label="Security gates — switch one off to see what gets through">
+              <button type="button" class="gate" data-gate="waf" aria-pressed="true">
+                <span class="gate-led" aria-hidden="true"></span>
+                <span class="mono">WAF</span>
+              </button>
+              <button type="button" class="gate" data-gate="tls" aria-pressed="true">
+                <span class="gate-led" aria-hidden="true"></span>
+                <span class="mono">TLS</span>
+              </button>
+              <button type="button" class="gate" data-gate="authz" aria-pressed="true">
+                <span class="gate-led" aria-hidden="true"></span>
+                <span class="mono">AuthZ</span>
+              </button>
             </div>
-            <p class="hero-description">
-                Designing & securing scalable infrastructure — from cloud architectures to encrypted communications.
+
+            <dl class="pipe-counts">
+              <div>
+                <dt class="mono">Served</dt>
+                <dd id="cServed">0</dd>
+              </div>
+              <div>
+                <dt class="mono">Blocked</dt>
+                <dd id="cBlocked">0</dd>
+              </div>
+              <div class="is-breach">
+                <dt class="mono">Breached</dt>
+                <dd id="cBreached">0</dd>
+              </div>
+            </dl>
+
+            <div class="demo-actions">
+              <button type="button" class="mini-btn" id="pipeAttack">Send attack burst</button>
+              <span class="demo-hint mono">Switch a gate off &mdash; that attack class walks straight in.</span>
+            </div>
+          </figure>
+        </div>
+
+        <p class="hero-lede reveal">
+          Cloud security engineer with a B.Sc. in Computational Science and Artificial Intelligence from Zewail City.
+          I work on hybrid architectures across AWS and Azure, wire security gates into CI/CD, and build
+          systems that can demonstrate their own state &mdash; whether that is failing over without anyone
+          watching, or proving a record was never altered.
+        </p>
+
+        <div class="hero-cta reveal">
+          <a class="btn btn-primary" href="#work">
+            See the work
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M5 12h13M13 6l6 6-6 6" />
+            </svg>
+          </a>
+          <a class="btn btn-ghost" href="Ahmed_Mohamed_Ebaid_Resume.pdf" download>
+            <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M12 4v11M7.5 10.5 12 15l4.5-4.5M5 19h14" />
+            </svg>
+            Résumé (PDF)
+          </a>
+        </div>
+      </div>
+
+      <div class="shell">
+        <dl class="hero-facts reveal">
+          <div>
+            <dt>Building</dt>
+            <dd>AURA &mdash; university registration SaaS, now in pre-incubation</dd>
+          </div>
+          <div>
+            <dt>Studying for</dt>
+            <dd>AWS Certified Security &mdash; Specialty</dd>
+          </div>
+          <div>
+            <dt>Graduated</dt>
+            <dd>July 2026, Zewail City</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ============ 01 WORK ============ -->
+    <section id="work" class="section">
+      <div class="shell">
+        <header class="section-head">
+          <span class="pill">01 &mdash; Selected work</span>
+          <h2>Two systems worth your time</h2>
+          <p class="section-note">
+            Both panels below are live &mdash; drag the slider, break the chain. They run the same rules the
+            real systems do.
+          </p>
+        </header>
+
+        <!-- ---------- AURA ---------- -->
+        <article class="feature reveal" id="aura">
+          <div class="feature-main">
+            <div class="feature-meta">
+              <span class="tag tag-accent">Graduation project</span>
+              <span class="tag">Pre-incubation</span>
+              <span class="mono">Sep&nbsp;2025 &mdash; Jun&nbsp;2026</span>
+            </div>
+
+            <h3 class="feature-title">AURA</h3>
+            <p class="feature-sub">Academic University Registration Architecture</p>
+
+            <p class="feature-body">
+              A multi-tenant SaaS platform for university registration, scheduling and grading, built by a
+              four-person team at Zewail City and nominated for the Medal of Excellence in Entrepreneurship.
+              It now runs as an active startup venture, accepted into a pre-incubation programme after a
+              competition interview and judging panel.
             </p>
-            <div class="hero-cta">
-                <a href="#projects" class="btn btn-primary">
-                    <span class="btn-icon">⚡</span> View Projects
-                </a>
-                <a href="#contact" class="btn btn-outline">
-                    <span class="btn-icon">📡</span> Get In Touch
-                </a>
+
+            <p class="feature-body">
+              The platform runs on a self-hosted server in Egypt and bursts into Azure only when the
+              on-premises node is saturated &mdash; enterprise availability at roughly the cost of a coffee
+              per month. My work sat in the application and security layer.
+            </p>
+
+            <ul class="feature-points">
+              <li>
+                <h4>Registration logic that respects the calendar</h4>
+                <p>Semester and registration-period scoping across dashboards, schedules and enrolment
+                  queries &mdash; single active period enforcement, per-semester section preservation, and
+                  correct behaviour for past and completed terms.</p>
+              </li>
+              <li>
+                <h4>Professor and dean workflows</h4>
+                <p>Built the professor dashboard and the grade-change request workflow with dean approval,
+                  plus admin panel operations for periods, semesters and majors, scoped by
+                  <code>university_id</code> for multi-tenant isolation.</p>
+              </li>
+              <li>
+                <h4>Security remediation</h4>
+                <p>Worked through the critical and high findings from the project's code scanning, alongside
+                  the formal OWASP/PTES penetration test the team ran &mdash; 13 findings remediated before
+                  submission.</p>
+              </li>
+            </ul>
+
+            <ul class="chips" aria-label="Technologies">
+              <li>React 19</li>
+              <li>Node 22</li>
+              <li>Express 5</li>
+              <li>PostgreSQL 17</li>
+              <li>Socket.IO</li>
+              <li>Redis</li>
+              <li>HAProxy</li>
+              <li>Cloudflare</li>
+              <li>Azure Container Apps</li>
+              <li>WireGuard</li>
+            </ul>
+
+            <div class="feature-links">
+              <a class="link-out" href="https://github.com/microburg/AURA_Project" target="_blank" rel="noopener">
+                Repository
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M8 16 16 8M9 8h7v7" />
+                </svg>
+              </a>
+              <a class="link-out" href="https://au-ra.software" target="_blank" rel="noopener">
+                au-ra.software
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M8 16 16 8M9 8h7v7" />
+                </svg>
+              </a>
             </div>
-            <div class="hero-links">
-                <a href="https://github.com/AhmadEbaid001" target="_blank" rel="noopener" class="hero-social"
-                    title="GitHub">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-                        <path
-                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                    </svg>
-                </a>
-                <a href="https://www.linkedin.com/in/ahmed-ebaid-0xc/" target="_blank" rel="noopener"
-                    class="hero-social" title="LinkedIn">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-                        <path
-                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
-                    </svg>
-                </a>
-                <a href="mailto:ahmedebaid0xc@gmail.com" class="hero-social" title="Email">
-                    <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22">
-                        <path
-                            d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                    </svg>
-                </a>
+          </div>
+
+          <!-- Interactive figure 1: the real burst rule, drivable -->
+          <aside class="feature-side">
+            <figure class="demo" id="burstDemo">
+              <figcaption>
+                <span class="demo-title mono">Hybrid burst</span>
+                <span class="demo-state mono" id="burstState" role="status" aria-live="polite">On-premises</span>
+              </figcaption>
+
+              <svg class="topo" viewBox="0 0 340 232" role="img"
+                aria-label="Topology: clients reach Cloudflare, then an active HAProxy load balancer with a standby, which routes to the on-premises node in Egypt or bursts to Azure Container Apps.">
+                <g class="topo-edges">
+                  <path class="e-static" d="M170 32V56" />
+                  <path class="e-static" d="M170 84v12h-65v14" />
+                  <path class="e-dash" d="M170 84v12h85v14" />
+                  <path class="e-onprem" id="edgeOnprem" d="M105 136v26H85v22" />
+                  <path class="e-azure" id="edgeAzure" d="M105 136v26h145v22" />
+                </g>
+
+                <g class="topo-nodes">
+                  <g class="node">
+                    <rect x="120" y="8" width="100" height="24" />
+                    <text x="170" y="24">students</text>
+                  </g>
+                  <g class="node">
+                    <rect x="90" y="60" width="160" height="24" />
+                    <text x="170" y="76">cloudflare edge</text>
+                  </g>
+                  <g class="node" id="nodeLb">
+                    <rect x="40" y="112" width="130" height="24" />
+                    <text x="105" y="128">haproxy active</text>
+                  </g>
+                  <g class="node node-idle">
+                    <rect x="190" y="112" width="130" height="24" />
+                    <text x="255" y="128">standby</text>
+                  </g>
+                  <g class="node" id="nodeOnprem">
+                    <rect x="20" y="184" width="130" height="32" />
+                    <text x="85" y="197">on-prem egypt</text>
+                    <text x="85" y="209" class="sub" id="onpremLoad">0 / 50</text>
+                  </g>
+                  <g class="node node-idle" id="nodeAzure">
+                    <rect x="185" y="184" width="135" height="32" />
+                    <text x="252" y="197">azure burst</text>
+                    <text x="252" y="209" class="sub" id="azureLoad">idle</text>
+                  </g>
+                </g>
+              </svg>
+
+              <div class="demo-control">
+                <label class="mono" for="loadRange">Concurrent connections</label>
+                <input type="range" id="loadRange" min="0" max="120" value="18" step="1"
+                  aria-describedby="burstHint">
+                <output class="mono" id="loadOut" for="loadRange">18</output>
+              </div>
+              <p class="demo-hint mono" id="burstHint">
+                HAProxy holds traffic on-prem to <code>maxconn 50</code>, then diverts the overflow to Azure.
+              </p>
+            </figure>
+
+            <dl class="stat-list">
+              <div>
+                <dt>Concurrent users sustained</dt>
+                <dd><span class="count" data-to="5000">5,000</span></dd>
+              </div>
+              <div>
+                <dt>Requests, 100% success</dt>
+                <dd><span class="count" data-to="902246">902,246</span></dd>
+              </div>
+              <div>
+                <dt>p95 latency at peak</dt>
+                <dd><span class="count" data-to="299.55" data-dec="2">299.55</span><span class="unit">ms</span></dd>
+              </div>
+              <div>
+                <dt>Total infrastructure cost</dt>
+                <dd>$<span class="count" data-to="3.5" data-dec="2">3.50</span><span class="unit">/mo</span></dd>
+              </div>
+            </dl>
+          </aside>
+        </article>
+
+        <!-- ---------- GEMP ---------- -->
+        <article class="feature reveal" id="gemp">
+          <div class="feature-main">
+            <div class="feature-meta">
+              <span class="tag tag-accent">Sole engineer</span>
+              <span class="mono">Aug&nbsp;2026 &mdash; Sep&nbsp;2026</span>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <div class="scroll-arrow"></div>
-        </div>
+
+            <h3 class="feature-title">EcoForge GEMP</h3>
+            <p class="feature-sub">Green Energy Monitoring Platform</p>
+
+            <p class="feature-body">
+              A budget allocator for public-building retrofits, built for RoboDam&nbsp;2026. I designed and
+              implemented the whole system as the sole engineer on a two-person team &mdash; domain model,
+              telemetry ingestion, optimisation engine, API and front end &mdash; and shipped it as a
+              containerised stack.
+            </p>
+
+            <ul class="feature-points">
+              <li>
+                <h4>Tamper-evident telemetry</h4>
+                <p>Every meter reading is HMAC-signed and hash-chained on arrival. Chain heads are anchored
+                  outside the database volume, so an altered <em>or</em> truncated record is detected, and a
+                  verification endpoint reports where a chain first breaks.</p>
+              </li>
+              <li>
+                <h4>Access control that records refusals</h4>
+                <p>RBAC with an audit log covering denied actions as well as permitted ones, and no default
+                  credentials &mdash; the deployment ships with a one-time bootstrap flow.</p>
+              </li>
+              <li>
+                <h4>A CI pipeline that actually blocks</h4>
+                <p>Bandit, Semgrep, pip-audit, Gitleaks, Hadolint and Trivy across filesystem, config, IaC and
+                  image. Container builds are signed, and every security exception carries an expiry date that
+                  fails the build once it lapses.</p>
+              </li>
+            </ul>
+
+            <ul class="chips" aria-label="Technologies">
+              <li>Python</li>
+              <li>FastAPI</li>
+              <li>Docker</li>
+              <li>TimescaleDB</li>
+              <li>MQTT</li>
+              <li>OR-Tools CP-SAT</li>
+              <li>nginx</li>
+            </ul>
+
+            <div class="feature-links">
+              <a class="link-out" href="https://github.com/AhmadEbaid001/EcoForge" target="_blank" rel="noopener">
+                Repository
+                <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                  <path d="M8 16 16 8M9 8h7v7" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Interactive figure 2: tamper a record, watch the verify walk stop -->
+          <aside class="feature-side">
+            <figure class="demo" id="chainDemo">
+              <figcaption>
+                <span class="demo-title mono">Integrity chain</span>
+                <span class="demo-state mono" id="chainState" role="status" aria-live="polite">Chain intact</span>
+              </figcaption>
+
+              <div class="chain-rail" role="group" aria-label="Five stored meter readings. Activate one to alter it.">
+                <button type="button" class="rec" data-i="1"><span class="mono">01</span></button>
+                <span class="lnk" aria-hidden="true"></span>
+                <button type="button" class="rec" data-i="2"><span class="mono">02</span></button>
+                <span class="lnk" aria-hidden="true"></span>
+                <button type="button" class="rec" data-i="3"><span class="mono">03</span></button>
+                <span class="lnk" aria-hidden="true"></span>
+                <button type="button" class="rec" data-i="4"><span class="mono">04</span></button>
+                <span class="lnk" aria-hidden="true"></span>
+                <button type="button" class="rec" data-i="5"><span class="mono">05</span></button>
+              </div>
+
+              <div class="anchor-row">
+                <span class="anchor-box mono">chain head &mdash; anchored off-volume</span>
+              </div>
+
+              <p class="demo-readout mono" id="chainReadout">walk: 01 &rarr; 02 &rarr; 03 &rarr; 04 &rarr; 05 &rarr; head &nbsp;ok</p>
+
+              <div class="demo-actions">
+                <button type="button" class="mini-btn" id="chainReset">Reset chain</button>
+                <span class="demo-hint mono">Alter any record &mdash; the walk stops there.</span>
+              </div>
+            </figure>
+
+            <dl class="stat-list">
+              <div>
+                <dt>Automated tests</dt>
+                <dd><span class="count" data-to="457">457</span></dd>
+              </div>
+              <div>
+                <dt>Buildings allocated</dt>
+                <dd><span class="count" data-to="50">50</span></dd>
+              </div>
+              <div>
+                <dt>Exact solver vs. best heuristic</dt>
+                <dd>+<span class="count" data-to="20">20</span><span class="unit">% median</span></dd>
+              </div>
+            </dl>
+          </aside>
+        </article>
+
+        <!-- ---------- supporting ---------- -->
+        <h3 class="sub-head mono">Also built</h3>
+        <ol class="proj-list">
+          <li class="proj reveal">
+            <span class="proj-idx mono">03</span>
+            <div class="proj-body">
+              <div class="proj-head">
+                <h3>Secure Communication Protocol</h3>
+                <span class="mono proj-date">May 2025</span>
+              </div>
+              <p>Messaging application built on RSA-2048 key exchange, AES-GCM authenticated encryption and
+                RSA-PSS signatures for non-repudiation. Session keys derive through HKDF-SHA256, giving
+                forward secrecy across sessions.</p>
+              <ul class="chips" aria-label="Technologies">
+                <li>Python</li>
+                <li>PyCryptodome</li>
+                <li>RSA-2048</li>
+                <li>AES-GCM</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="proj reveal">
+            <span class="proj-idx mono">04</span>
+            <div class="proj-body">
+              <div class="proj-head">
+                <h3>Automated Backup &amp; Disaster Recovery</h3>
+                <span class="mono proj-date">Dec 2025</span>
+              </div>
+              <p>Zero-touch backup system holding a 24-hour Recovery Point Objective, with AES-256 encryption
+                at rest and SSH/RSA-2048 secured transfers. Resilience validated through link aggregation at
+                148&nbsp;Mbps with zero packet loss.</p>
+              <ul class="chips" aria-label="Technologies">
+                <li>Bash</li>
+                <li>OpenSSL</li>
+                <li>Cron</li>
+                <li>EVE-NG</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="proj reveal">
+            <span class="proj-idx mono">05</span>
+            <div class="proj-body">
+              <div class="proj-head">
+                <h3>Enterprise Data Center Network</h3>
+                <span class="mono proj-date">Dec 2025</span>
+              </div>
+              <p>Three-tier hierarchical design for 600+ users across five departments, with OSPF dynamic
+                routing and dual-ISP redundancy. VLSM for efficient addressing, SNMPv2c for centralised
+                monitoring.</p>
+              <ul class="chips" aria-label="Technologies">
+                <li>Cisco</li>
+                <li>OSPF</li>
+                <li>VLANs</li>
+                <li>SNMP</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- ======== ABOUT SECTION ======== -->
-    <section id="about" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-decorator">//</span> About Me
-            </h2>
-            <div class="about-grid">
-                <div class="about-text reveal">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <span class="terminal-dot red"></span>
-                            <span class="terminal-dot yellow"></span>
-                            <span class="terminal-dot green"></span>
-                            <span class="terminal-title">about_ahmed.sh</span>
-                        </div>
-                        <div class="terminal-body">
-                            <p class="terminal-line"><span class="prompt">$</span> cat objective.txt</p>
-                            <p class="terminal-output">Motivated Security Engineer with a focus on Cloud Architecture
-                                and Secure Computing. Possesses comprehensive knowledge of Virtualization, Storage Area
-                                Networks (SAN), and DDoS mitigation, backed by practical internship experience.</p>
-                            <p class="terminal-line"><span class="prompt">$</span> echo $GOAL</p>
-                            <p class="terminal-output">Design and maintain scalable, secure, and redundant
-                                infrastructure systems.</p>
-                            <p class="terminal-line"><span class="prompt">$</span> cat skills.conf | head</p>
-                            <p class="terminal-output">Python scripting | Linux administration | Network Security |
-                                Cloud Architecture</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-cards reveal">
-                    <div class="info-card">
-                        <div class="info-icon">🎓</div>
-                        <h3>Education</h3>
-                        <p class="info-main">B.Sc. Information Technology</p>
-                        <p class="info-sub">Networks, Security & Governance</p>
-                        <p class="info-detail">Zewail City of Science and Technology</p>
-                        <p class="info-date">Oct 2022 – July 2026</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">📍</div>
-                        <h3>Location</h3>
-                        <p class="info-main">6th of October, Giza</p>
-                        <p class="info-sub">Egypt</p>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-icon">🎯</div>
-                        <h3>Focus Areas</h3>
-                        <p class="info-main">Network Security</p>
-                        <p class="info-sub">Cloud Computing • Cybersecurity</p>
-                    </div>
-                </div>
+    <!-- ============ 02 EXPERIENCE ============ -->
+    <section id="experience" class="section section-alt">
+      <div class="shell">
+        <header class="section-head">
+          <span class="pill">02 &mdash; Experience</span>
+          <h2>Where I have worked</h2>
+        </header>
+
+        <ol class="timeline">
+          <li class="tl-item reveal">
+            <div class="tl-when mono">Jul 2025 &mdash; Aug 2025</div>
+            <div class="tl-what">
+              <h3>Security Intern</h3>
+              <p class="tl-org">Commercial International Bank (CIB) &middot; Egypt</p>
+              <ul>
+                <li>Ran a vulnerability assessment simulation with Nessus against a deliberately vulnerable
+                  endpoint, analysed the findings and documented remediation.</li>
+                <li>Worked inside Splunk SIEM: log ingestion pipelines, search queries, and a correlation
+                  alert for anomalous activity.</li>
+                <li>Studied the security controls and governance frameworks a regulated bank runs on.</li>
+              </ul>
             </div>
-        </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-when mono">Jul 2024 &mdash; Jan 2025</div>
+            <div class="tl-what">
+              <h3>Network Intern</h3>
+              <p class="tl-org">Zewail City IT Department &middot; Giza, Egypt</p>
+              <ul>
+                <li>Designed and partially implemented a network quota management system on open-source
+                  tooling, enforcing per-user bandwidth policy across campus.</li>
+                <li>Assisted vulnerability assessments and hardening across internal infrastructure.</li>
+                <li>Worked on installation and maintenance projects &mdash; enterprise switching, routing and
+                  cabling.</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="tl-item reveal">
+            <div class="tl-when mono">Sep 2024 &mdash; Dec 2024</div>
+            <div class="tl-what">
+              <h3>Junior Teaching Assistant <span class="tag">Volunteer</span></h3>
+              <p class="tl-org">Network Installation &amp; Maintenance &middot; Zewail City</p>
+              <ul>
+                <li>Ran lab sessions on physical network installation, troubleshooting and maintenance for a
+                  class of undergraduates.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
     </section>
 
-    <!-- ======== USP SECTION ======== -->
-    <section id="usp" class="section usp-section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-decorator">//</span> What Sets Me Apart
-            </h2>
-            <p class="usp-headline">I don't just secure systems — I <span class="usp-accent">architect them from the
-                    ground up</span> with security woven into every layer.</p>
-            <div class="usp-grid">
-                <div class="usp-card reveal">
-                    <div class="usp-number">01</div>
-                    <div class="usp-card-glow"></div>
-                    <div class="usp-icon">🔬</div>
-                    <h3 class="usp-title">Security-First Engineering</h3>
-                    <p class="usp-text">From RSA-2048 key exchanges to AES-GCM authenticated encryption, I build
-                        cryptographic protocols from scratch — not just configure them. Every system I design starts
-                        with a threat model.</p>
-                </div>
-                <div class="usp-card reveal">
-                    <div class="usp-number">02</div>
-                    <div class="usp-card-glow"></div>
-                    <div class="usp-icon">🌐</div>
-                    <h3 class="usp-title">Full-Stack Infrastructure</h3>
-                    <p class="usp-text">Most engineers specialize in either networking OR security OR cloud. I bridge
-                        all three — designing 600+ user enterprise networks, automating disaster recovery, and
-                        architecting hybrid cloud solutions.</p>
-                </div>
-                <div class="usp-card reveal">
-                    <div class="usp-number">03</div>
-                    <div class="usp-card-glow"></div>
-                    <div class="usp-icon">🏦</div>
-                    <h3 class="usp-title">Banking-Grade Security</h3>
-                    <p class="usp-text">Hands-on experience at CIB — one of Egypt's largest banks — gave me exposure to
-                        financial-grade security standards, compliance requirements, and the real-world stakes of
-                        protecting critical infrastructure.</p>
-                </div>
-                <div class="usp-card reveal">
-                    <div class="usp-number">04</div>
-                    <div class="usp-card-glow"></div>
-                    <div class="usp-icon">📐</div>
-                    <h3 class="usp-title">Architect for Scale</h3>
-                    <p class="usp-text">My capstone AURA project proves it: a hybrid cloud system with auto-scaling load
-                        balancers that activates Azure VMs only during peak traffic — balancing cost efficiency with
-                        zero-downtime resilience.</p>
-                </div>
-            </div>
-            <div class="usp-bottom reveal">
-                <div class="usp-stat-bar">
-                    <div class="usp-stat">
-                        <span class="usp-stat-number">4+</span>
-                        <span class="usp-stat-label">Major Projects</span>
-                    </div>
-                    <div class="usp-stat-divider"></div>
-                    <div class="usp-stat">
-                        <span class="usp-stat-number">2</span>
-                        <span class="usp-stat-label">Industry Certs</span>
-                    </div>
-                    <div class="usp-stat-divider"></div>
-                    <div class="usp-stat">
-                        <span class="usp-stat-number">3</span>
-                        <span class="usp-stat-label">Domains Bridged</span>
-                    </div>
-                    <div class="usp-stat-divider"></div>
-                    <div class="usp-stat">
-                        <span class="usp-stat-number">1</span>
-                        <span class="usp-stat-label">Core Mission</span>
-                    </div>
-                </div>
-            </div>
+    <!-- ============ 03 CAPABILITIES ============ -->
+    <section id="capabilities" class="section">
+      <div class="shell">
+        <header class="section-head">
+          <span class="pill">03 &mdash; Capabilities</span>
+          <h2>What I work with</h2>
+          <p class="section-note">Tools and domains I have actually shipped or operated with.</p>
+        </header>
+
+        <div class="spec-sheet">
+          <section class="spec reveal">
+            <h3>Cloud &amp; infrastructure</h3>
+            <ul>
+              <li>AWS &mdash; IAM, VPC, Security Groups, Load Balancer</li>
+              <li>Microsoft Azure &mdash; Container Apps, auto-scaling</li>
+              <li>Hybrid cloud architecture</li>
+              <li>Docker &amp; Docker Compose</li>
+              <li>nginx, HAProxy</li>
+            </ul>
+          </section>
+
+          <section class="spec reveal">
+            <h3>DevSecOps</h3>
+            <ul>
+              <li>CI/CD security gating &mdash; GitHub Actions</li>
+              <li>SAST &mdash; Bandit, Semgrep</li>
+              <li>Composition analysis &mdash; pip-audit</li>
+              <li>Secrets scanning &mdash; Gitleaks</li>
+              <li>Container &amp; IaC &mdash; Trivy, Hadolint</li>
+              <li>Container image signing</li>
+            </ul>
+          </section>
+
+          <section class="spec reveal">
+            <h3>Security domains</h3>
+            <ul>
+              <li>Vulnerability assessment</li>
+              <li>Incident response</li>
+              <li>Threat detection &amp; SIEM operations</li>
+              <li>Threat modelling &mdash; MITRE ATT&amp;CK, STRIDE, PASTA</li>
+              <li>Encryption &amp; key management</li>
+              <li>Application &amp; API security</li>
+              <li>RBAC, audit logging, multi-tenant isolation</li>
+              <li>Data integrity &mdash; HMAC, hash chaining</li>
+              <li>IT governance</li>
+            </ul>
+          </section>
+
+          <section class="spec reveal">
+            <h3>Security tooling</h3>
+            <ul>
+              <li>Nessus</li>
+              <li>Splunk (SIEM)</li>
+              <li>Wireshark</li>
+              <li>Nmap</li>
+              <li>Snort</li>
+              <li>Volatility</li>
+              <li>Autopsy</li>
+            </ul>
+          </section>
+
+          <section class="spec reveal">
+            <h3>Networking</h3>
+            <ul>
+              <li>Network design &amp; installation</li>
+              <li>Firewall configuration</li>
+              <li>VLANs, OSPF, VLSM</li>
+              <li>SNMP, MQTT</li>
+              <li>WireGuard</li>
+              <li>CCNA / CCNP track</li>
+            </ul>
+          </section>
+
+          <section class="spec reveal">
+            <h3>Languages &amp; platforms</h3>
+            <ul>
+              <li>Python &mdash; FastAPI, pytest</li>
+              <li>JavaScript &mdash; React, Node, Express</li>
+              <li>Bash, SQL, HTML/CSS</li>
+              <li>Linux &mdash; Ubuntu, Kali</li>
+              <li>PostgreSQL, TimescaleDB, Redis</li>
+              <li>EVE-NG, Cisco Packet Tracer</li>
+            </ul>
+          </section>
         </div>
+      </div>
     </section>
 
-    <!-- ======== EXPERIENCE SECTION ======== -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-decorator">//</span> Experience
-            </h2>
-            <div class="timeline">
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-badge work">Work</span>
-                            <span class="timeline-date">Jul 2025 – Aug 2025</span>
-                        </div>
-                        <h3 class="timeline-title">Security Intern</h3>
-                        <p class="timeline-company">Commercial International Bank (CIB) — Egypt</p>
-                        <ul class="timeline-details">
-                            <li>Gained exposure to banking IT systems and security practices</li>
-                            <li>Assisted in cybersecurity tasks and network management</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-badge work">Work</span>
-                            <span class="timeline-date">Jul 2024 – Jan 2025</span>
-                        </div>
-                        <h3 class="timeline-title">Network Intern</h3>
-                        <p class="timeline-company">Zewail City IT Department — Giza, Egypt</p>
-                        <ul class="timeline-details">
-                            <li>Gained hands-on experience in network administration and maintenance</li>
-                            <li>Assisted in vulnerability assessment and security implementations</li>
-                            <li>Participated in network design and installation projects</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-badge volunteer">Volunteer</span>
-                            <span class="timeline-date">Sep 2024 – Dec 2024</span>
-                        </div>
-                        <h3 class="timeline-title">Junior Teaching Assistant</h3>
-                        <p class="timeline-company">Network Installation & Maintenance Course — Zewail City</p>
-                        <ul class="timeline-details">
-                            <li>Assisted students with network installation and maintenance concepts</li>
-                            <li>Supported course instructors with lab sessions and demonstrations</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item reveal">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <span class="timeline-badge volunteer">Volunteer</span>
-                            <span class="timeline-date">Sep 2023 – Sep 2024</span>
-                        </div>
-                        <h3 class="timeline-title">Member of Parliament (IT Rep)</h3>
-                        <p class="timeline-company">Zewail City Student Parliament — Giza, Egypt</p>
-                        <ul class="timeline-details">
-                            <li>Represented IT students in university governance</li>
-                            <li>Participated in decision-making processes affecting student life</li>
-                        </ul>
-                    </div>
-                </div>
+    <!-- ============ 04 CREDENTIALS ============ -->
+    <section id="credentials" class="section section-alt">
+      <div class="shell">
+        <header class="section-head">
+          <span class="pill">04 &mdash; Credentials</span>
+          <h2>Certifications</h2>
+        </header>
+
+        <div class="cred-grid">
+          <article class="cred reveal">
+            <div class="cred-top">
+              <h3>Information Security Analyst</h3>
+              <span class="mono">2026</span>
             </div>
+            <p class="cred-sub">Infrastructure &amp; Security</p>
+            <p class="cred-org">Digital Egyptian Pioneers Initiative (DEPI) &middot; MCIT</p>
+            <ul>
+              <li>Capstone: a full incident response playbook covering detection, containment, eradication
+                and recovery.</li>
+              <li>SOC operations, vulnerability management, SIEM and incident detection, cyber threat
+                analysis (IoCs and attack methodology).</li>
+            </ul>
+          </article>
+
+          <article class="cred reveal">
+            <div class="cred-top">
+              <h3>Security Engineer Path</h3>
+              <span class="mono">2026</span>
+            </div>
+            <p class="cred-sub">Three certificates completed</p>
+            <p class="cred-org">TryHackMe</p>
+            <ul class="cred-parts">
+              <li><strong>Security Engineer</strong> &mdash; IAM and cryptography, threat modelling
+                frameworks, network and system security.</li>
+              <li><strong>DevSecOps</strong> &mdash; security in CI/CD, SAST, composition analysis, secrets
+                and container image scanning, pipeline hardening.</li>
+              <li><strong>Defending AWS</strong> &mdash; IAM policy design, VPC network controls, CloudTrail
+                logging, cloud-native detection and response.</li>
+            </ul>
+          </article>
+
+          <article class="cred reveal">
+            <div class="cred-top">
+              <h3>Google Cybersecurity Professional</h3>
+              <span class="mono">2023</span>
+            </div>
+            <p class="cred-sub">Professional Certificate</p>
+            <p class="cred-org">Coursera</p>
+            <ul>
+              <li>Network security, asset and threat management, Python automation, Linux and SQL for
+                security operations, detection and response.</li>
+            </ul>
+          </article>
+
+          <article class="cred cred-progress reveal">
+            <div class="cred-top">
+              <h3>AWS Certified Security &mdash; Specialty</h3>
+              <span class="mono">In progress</span>
+            </div>
+            <p class="cred-sub">SCS-C02</p>
+            <p class="cred-org">Amazon Web Services</p>
+            <ul>
+              <li>Currently preparing. The natural next step from the AWS work in AURA and the Defending AWS
+                certificate.</li>
+            </ul>
+          </article>
         </div>
+      </div>
     </section>
 
-    <!-- ======== SKILLS SECTION ======== -->
-    <section id="skills" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-decorator">//</span> Skills & Expertise
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🛡️</div>
-                    <h3>Security</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Vulnerability Assessment</span>
-                        <span class="tag">Encryption</span>
-                        <span class="tag">Cybersecurity</span>
-                        <span class="tag">IT Governance</span>
-                        <span class="tag">Incident Response</span>
-                        <span class="tag">Security Frameworks</span>
-                    </div>
-                </div>
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🌐</div>
-                    <h3>Networking</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Network Design</span>
-                        <span class="tag">Installation & Maintenance</span>
-                        <span class="tag">Administration</span>
-                        <span class="tag">CCNA</span>
-                        <span class="tag">CCNP</span>
-                        <span class="tag">Network Security</span>
-                    </div>
-                </div>
-                <div class="skill-card reveal">
-                    <div class="skill-icon">☁️</div>
-                    <h3>Cloud</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Cloud Architecture</span>
-                        <span class="tag">Secure Computing</span>
-                        <span class="tag">AWS</span>
-                        <span class="tag">Microsoft Azure</span>
-                        <span class="tag">Microsoft 365</span>
-                    </div>
-                </div>
-                <div class="skill-card reveal">
-                    <div class="skill-icon">💻</div>
-                    <h3>Programming</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Python</span>
-                        <span class="tag">SQL</span>
-                        <span class="tag">HTML/CSS</span>
-                        <span class="tag">Bash</span>
-                        <span class="tag">Scripting</span>
-                    </div>
-                </div>
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🗄️</div>
-                    <h3>Infrastructure</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Microsoft SQL Server</span>
-                        <span class="tag">Data Structures</span>
-                        <span class="tag">Hardware Troubleshooting</span>
-                        <span class="tag">IoT</span>
-                        <span class="tag">Robotics</span>
-                    </div>
-                </div>
-                <div class="skill-card reveal">
-                    <div class="skill-icon">🧠</div>
-                    <h3>Soft Skills</h3>
-                    <div class="skill-tags">
-                        <span class="tag">Critical Thinking</span>
-                        <span class="tag">Teamwork</span>
-                        <span class="tag">Teaching</span>
-                        <span class="tag">Communication</span>
-                        <span class="tag">Adaptability</span>
-                        <span class="tag">Problem Solving</span>
-                    </div>
-                </div>
+    <!-- ============ 05 PROFILE ============ -->
+    <section id="profile" class="section">
+      <div class="shell">
+        <header class="section-head">
+          <span class="pill">05 &mdash; Profile</span>
+          <h2>A bit more</h2>
+        </header>
+
+        <div class="profile-grid">
+          <div class="profile-prose reveal">
+            <p>I graduated from Zewail City in July 2026 with a B.Sc. in Computational Science and Artificial Intelligence, majoring in Information Technology with a concentration in Networks, Security and Governance.
+              My work sits where cloud architecture meets security engineering: designing the
+              infrastructure, then making it defensible.</p>
+            <p>Two things shape how I build. First, a system should be able to demonstrate its own state
+              &mdash; failing over on its own, or walking a chain of records back and saying exactly where
+              trust ends. Second, security belongs in the pipeline rather than in a review at the end; a gate
+              that blocks on any finding is a gate people actually design around.</p>
+            <p>AURA is the project I care most about. It started as a graduation requirement and turned into
+              something four of us are still building &mdash; a registration platform a university in a
+              developing region can actually afford to run. Watching it hold five thousand concurrent users
+              on a server sitting in Egypt, for a few dollars a month, is the most satisfying result I have
+              been part of.</p>
+            <p>Before that: a summer inside a regulated bank's security team, a year in a university IT
+              department building and hardening campus network infrastructure, and a semester teaching the
+              network installation lab I had taken the year before.</p>
+          </div>
+
+          <div class="profile-side reveal">
+            <div class="side-card">
+              <h3 class="mono">Education</h3>
+              <p class="side-main">B.Sc. Computational Science &amp; Artificial Intelligence</p>
+              <p class="side-sub">Major: Information Technology</p>
+              <p class="side-sub">Concentration: Networks, Security &amp; Governance</p>
+              <p class="side-sub">Zewail City of Science and Technology</p>
+              <p class="mono side-date">Oct 2022 &mdash; Jul 2026 &middot; graduated</p>
             </div>
+            <div class="side-card">
+              <h3 class="mono">Coursework</h3>
+              <p class="side-sub">Network Security &middot; Cloud Computing &middot; IT Governance &middot;
+                Cryptography &middot; Operating Systems &middot; Database Systems</p>
+            </div>
+            <div class="side-card">
+              <h3 class="mono">Recognition</h3>
+              <p class="side-sub">Medal of Excellence nomination &mdash; Entrepreneurship, Zewail City
+                Commencement 2025, for AURA.</p>
+            </div>
+            <div class="side-card">
+              <h3 class="mono">Languages</h3>
+              <p class="side-sub">Arabic (native) &middot; English (fluent)</p>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
-    <!-- ======== PROJECTS SECTION ======== -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-decorator">//</span> Projects
-            </h2>
-            <div class="projects-grid">
-                <div class="project-card reveal">
-                    <div class="project-header">
-                        <div class="project-icon">🏗️</div>
-                        <a href="https://github.com/AhmadEbaid001" target="_blank" rel="noopener" class="project-link"
-                            title="View on GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <h3 class="project-title">AURA: Hybrid Cloud Registration</h3>
-                    <p class="project-badge">Capstone Project</p>
-                    <p class="project-description">
-                        Architected a Hybrid Cloud solution integrating local servers with Azure VMs for peak traffic.
-                        Designed auto-scaling with Load Balancers and implemented RBAC + OTP verification.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tech-tag">Azure</span>
-                        <span class="tech-tag">React.js</span>
-                        <span class="tech-tag">Express.js</span>
-                        <span class="tech-tag">PostgreSQL</span>
-                    </div>
-                    <span class="project-date">Sep 2025 – Jun 2026</span>
-                </div>
+    <!-- ============ 06 CONTACT ============ -->
+    <section id="contact" class="section contact">
+      <div class="shell">
+        <header class="section-head">
+          <span class="pill">06 &mdash; Contact</span>
+          <h2>Get in touch</h2>
+          <p class="section-note">Direct channels only. I reply to email fastest.</p>
+        </header>
 
-                <div class="project-card reveal">
-                    <div class="project-header">
-                        <div class="project-icon">💾</div>
-                        <a href="https://github.com/AhmadEbaid001" target="_blank" rel="noopener" class="project-link"
-                            title="View on GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <h3 class="project-title">Network Backup & Disaster Recovery</h3>
-                    <p class="project-description">
-                        Developed a Zero-Touch automated backup system with 24h RPO. Implemented AES-256 encryption for
-                        data at rest and SSH with 2048-bit RSA keys. Achieved 148 Mbps throughput with zero packet loss.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tech-tag">Bash</span>
-                        <span class="tech-tag">OpenSSL</span>
-                        <span class="tech-tag">AES-256</span>
-                        <span class="tech-tag">EVE-NG</span>
-                    </div>
-                    <span class="project-date">Dec 2025</span>
-                </div>
-
-                <div class="project-card reveal">
-                    <div class="project-header">
-                        <div class="project-icon">🏢</div>
-                        <a href="https://github.com/AhmadEbaid001" target="_blank" rel="noopener" class="project-link"
-                            title="View on GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <h3 class="project-title">Enterprise Data Center Network</h3>
-                    <p class="project-description">
-                        Designed a three-tier hierarchical network for 600+ users across five departments. Configured
-                        OSPF routing, Dual-ISP redundancy, VLSM allocation, and SNMPv2c monitoring.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tech-tag">Cisco Packet Tracer</span>
-                        <span class="tech-tag">OSPF</span>
-                        <span class="tech-tag">VLANs</span>
-                        <span class="tech-tag">SNMP</span>
-                    </div>
-                    <span class="project-date">Dec 2025</span>
-                </div>
-
-                <div class="project-card reveal">
-                    <div class="project-header">
-                        <div class="project-icon">🔐</div>
-                        <a href="https://github.com/AhmadEbaid001" target="_blank" rel="noopener" class="project-link"
-                            title="View on GitHub">
-                            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
-                                <path
-                                    d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-                            </svg>
-                        </a>
-                    </div>
-                    <h3 class="project-title">Secure Communication Protocol</h3>
-                    <p class="project-description">
-                        Built a secure messaging app using RSA-2048 key exchange and AES-GCM encryption. Implemented
-                        RSA-PSS digital signatures and HKDF-SHA256 session key derivation for forward secrecy.
-                    </p>
-                    <div class="project-tags">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">RSA-2048</span>
-                        <span class="tech-tag">AES-GCM</span>
-                        <span class="tech-tag">PyCryptodome</span>
-                    </div>
-                    <span class="project-date">May 2025</span>
-                </div>
-            </div>
-        </div>
+        <ul class="contact-list reveal">
+          <li>
+            <a href="mailto:ahmedebaid0xc@gmail.com">
+              <span class="mono contact-label">Email</span>
+              <span class="contact-value">ahmedebaid0xc@gmail.com</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h13M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="tel:+201553395331">
+              <span class="mono contact-label">Phone</span>
+              <span class="contact-value">+20 155 339 5331</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h13M13 6l6 6-6 6" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/ahmed-ebaid-0xc/" target="_blank" rel="noopener">
+              <span class="mono contact-label">LinkedIn</span>
+              <span class="contact-value">/in/ahmed-ebaid-0xc</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M8 16 16 8M9 8h7v7" />
+              </svg>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/AhmadEbaid001" target="_blank" rel="noopener">
+              <span class="mono contact-label">GitHub</span>
+              <span class="contact-value">AhmadEbaid001</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M8 16 16 8M9 8h7v7" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
     </section>
+  </main>
 
-    <!-- ======== CERTIFICATIONS SECTION ======== -->
-    <section id="certifications" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-decorator">//</span> Certifications
-            </h2>
-            <div class="certs-grid">
-                <div class="cert-card reveal">
-                    <div class="cert-glow"></div>
-                    <div class="cert-badge">🏛️</div>
-                    <h3 class="cert-title">Information Security Analyst</h3>
-                    <p class="cert-subtitle">Infrastructure and Security</p>
-                    <p class="cert-issuer">Digital Egyptian Pioneers Initiative (DEPI) — MCIT</p>
-                    <p class="cert-year">2026</p>
-                    <div class="cert-details">
-                        <p><strong>Core:</strong> Encrypting data at rest/transit, security system implementation,
-                            intrusion detection</p>
-                        <p><strong>Technical:</strong> SOC Concepts, Vulnerability Management, SIEM, Logging</p>
-                        <p><strong>Operations:</strong> Incident Response, Security Operations, Reporting</p>
-                    </div>
-                </div>
-                <div class="cert-card reveal">
-                    <div class="cert-glow"></div>
-                    <div class="cert-badge">🔵</div>
-                    <h3 class="cert-title">Google Cybersecurity Professional</h3>
-                    <p class="cert-subtitle">Certificate Program</p>
-                    <p class="cert-issuer">Coursera — Google</p>
-                    <p class="cert-year">2023</p>
-                    <div class="cert-modules">
-                        <span class="cert-module">Networks & Network Security</span>
-                        <span class="cert-module">Assets, Threats & Vulnerabilities</span>
-                        <span class="cert-module">Python Automation</span>
-                        <span class="cert-module">Security Risks</span>
-                        <span class="cert-module">Detection & Response</span>
-                        <span class="cert-module">Linux & SQL</span>
-                        <span class="cert-module">Foundations</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <footer class="site-foot">
+    <div class="shell foot-inner">
+      <p class="mono">Ahmed Mohamed Ebaid &middot; Giza, Egypt</p>
+      <p class="mono foot-meta">Built by hand &mdash; no framework, no build step.</p>
+    </div>
+  </footer>
 
-    <!-- ======== CONTACT SECTION ======== -->
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-decorator">//</span> Get In Touch
-            </h2>
-            <div class="contact-container reveal">
-                <div class="contact-info centered">
-                    <p class="contact-intro">Interested in working together or have a security challenge? Let's connect.
-                    </p>
-                    <div class="contact-methods">
-                        <a href="mailto:ahmedebaid0xc@gmail.com" class="contact-method">
-                            <div class="contact-icon">📧</div>
-                            <div>
-                                <p class="contact-label">Email</p>
-                                <p class="contact-value">ahmedebaid0xc@gmail.com</p>
-                            </div>
-                        </a>
-                        <a href="tel:+201553395331" class="contact-method">
-                            <div class="contact-icon">📱</div>
-                            <div>
-                                <p class="contact-label">Phone</p>
-                                <p class="contact-value">+20 155 339 5331</p>
-                            </div>
-                        </a>
-                        <a href="https://github.com/AhmadEbaid001" target="_blank" rel="noopener"
-                            class="contact-method">
-                            <div class="contact-icon">💻</div>
-                            <div>
-                                <p class="contact-label">GitHub</p>
-                                <p class="contact-value">github.com/AhmadEbaid001</p>
-                            </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/ahmed-ebaid-0xc/" target="_blank" rel="noopener"
-                            class="contact-method">
-                            <div class="contact-icon">🔗</div>
-                            <div>
-                                <p class="contact-label">LinkedIn</p>
-                                <p class="contact-value">linkedin.com/in/ahmed-ebaid-0xc</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ======== FOOTER ======== -->
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-content">
-                <p class="footer-text">
-                    <span class="footer-bracket">&lt;</span> Designed & Built by <strong>Ahmed Ebaid</strong> <span
-                        class="footer-bracket">/&gt;</span>
-                </p>
-                <p class="footer-copy">&copy; 2026 All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 
 </html>

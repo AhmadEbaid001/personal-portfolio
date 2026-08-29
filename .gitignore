@@ -1,0 +1,32 @@
+# --- local tooling / editor state ---
+.vscode/
+.idea/
+*.code-workspace
+
+# --- design notes kept locally, not part of the deployed site ---
+design-system/
+
+# --- superseded resume drafts ---
+My_NEW_Resume*.pdf
+Ahmed_Mohamed_Ebaid_CV.pdf
+cv_text.txt
+
+# --- generated from the LaTeX sources in cv/ ---
+cv/*.pdf
+Ahmed_Mohamed_Ebaid_Resume_ATS.txt
+
+# --- LaTeX build artefacts ---
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# --- OS / misc ---
+Thumbs.db
+desktop.ini
+.DS_Store
+*.tmp
+~$*
