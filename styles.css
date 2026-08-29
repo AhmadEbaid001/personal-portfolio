@@ -770,6 +770,13 @@ h4 {
   margin-top: 0;
 }
 
+/* a repository that exists but is not public — stated rather than linked to a 404 */
+.link-muted {
+  align-self: center;
+  padding-bottom: 2px;
+  border-bottom: 1px dashed var(--border-strong);
+}
+
 .link-out {
   display: inline-flex;
   align-items: center;
